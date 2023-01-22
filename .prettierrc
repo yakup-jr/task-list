@@ -1,3 +1,9 @@
 {
-  "singleQuote": true
+	"useTabs": true,
+	"semi": false,
+	"singleQuote": true,
+	"singleAttributePerLine": true,
+	"arrowParens": "avoid",
+	"editorconfig": true,
+	"endOfLine": "lf"
 }
