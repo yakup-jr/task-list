@@ -6,11 +6,6 @@ on:
       - main
   pull_request:
 
-permissions:
-  contents: read
-  issues: write
-  pull-requests: write
-
 jobs:
   main:
     name: Nx Cloud - Main Job
@@ -26,6 +21,7 @@ jobs:
         npx nx affected --target=lint --parallel=3
         npx nx affected --target=test --parallel=3 --ci --code-coverage
         npx nx affected --target=build --parallel=3
+
   agents:
     name: Nx Cloud - Agents
     uses: nrwl/ci/.github/workflows/nx-cloud-agents.yml@v0.8
