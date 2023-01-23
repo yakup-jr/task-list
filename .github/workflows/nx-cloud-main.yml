@@ -1,0 +1,5 @@
+- uses: nrwl/ci/.github/workflows/nx-cloud-agents.yml@v0.11.2
+  secrets:
+    NPM_TOKEN: ''
+    NX_CLOUD_ACCESS_TOKEN: 'NGM4NTQwYWYtNGFjZC00YWNlLTg4NGUtYjAxMTljMThkMmY3fHJlYWQtd3JpdGU'
+    NX_CLOUD_AUTH_TOKEN: 'NGM4NTQwYWYtNGFjZC00YWNlLTg4NGUtYjAxMTljMThkMmY3fHJlYWQtd3JpdGU'
