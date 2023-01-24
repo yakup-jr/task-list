@@ -61,7 +61,8 @@
 					"port": 4202
 				}
 			},
-			"defaultConfiguration": "development"
+			"defaultConfiguration": "development",
+			"proxyConfig": "apps/frontend/admin/proxy.conf.json"
 		},
 		"extract-i18n": {
 			"executor": "@angular-devkit/build-angular:extract-i18n",
@@ -88,5 +89,5 @@
 			}
 		}
 	},
-	"tags": ["scope:frontend-admin"]
+	"tags": ["scope:frontend-admin", "type:app"]
 }
