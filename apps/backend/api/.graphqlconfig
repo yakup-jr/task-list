@@ -1,0 +1,13 @@
+{
+	"name": "Backend API GraphQL Schema",
+	"schemaPath": "schema.graphql",
+	"endpoints": {
+		"Default GraphQL Endpoints": {
+			"url": "http://localhost:3333/graphql",
+			"headers": {
+				"user-agent": "JS GraphQL"
+			},
+			"introspect": false
+		}
+	}
+}
