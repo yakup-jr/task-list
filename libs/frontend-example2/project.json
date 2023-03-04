@@ -41,5 +41,5 @@
 			}
 		}
 	},
-	"tags": []
+	"tags": ["scope:frontend-example2", "type:lib", "scope:frontend-client"]
 }

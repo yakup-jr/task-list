@@ -1,8 +1,10 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
+	/* Fonts */
+	--primary-font: 'Pragmato Pro', 'Helvetica Neue', 'Helvetica', 'Arial';
 	/* Colors */
 	--primary-light: #a5b4fc;
 	--primary: #6366f1;
@@ -18,4 +20,13 @@
 	--spacing-md: 1.5rem;
 	--spacing-lg: 2rem;
 	--spacing-xl: 3rem;
+}
+
+html,
+body {
+	height: 100%;
+}
+body {
+	margin: 0;
+	font-family: Roboto, 'Helvetica Neue', sans-serif;
 }

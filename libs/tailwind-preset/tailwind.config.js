@@ -1,5 +1,10 @@
 module.exports = {
 	theme: {
+		extend: {
+			fontFamily: {
+				primary: ['var(--primary-font)', 'sans-serif'],
+			},
+		},
 		colors: {
 			primary: {
 				light: 'var(--primary-light)',
