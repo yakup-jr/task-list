@@ -16,7 +16,10 @@
 		"baseUrl": ".",
 		"paths": {
 			"@task-list/frontend-example": ["libs/frontend-example/src/index.ts"],
-			"@task-list/frontend-example2": ["libs/frontend-example2/src/index.ts"]
+			"@task-list/frontend-example2": ["libs/frontend-example2/src/index.ts"],
+			"@task-list/shared/data-access/interfaces": [
+				"libs/shared/data-access/interfaces/src/index.ts"
+			]
 		}
 	},
 	"exclude": ["node_modules", "tmp"]
