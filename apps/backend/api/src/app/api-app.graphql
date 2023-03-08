@@ -1,0 +1,5 @@
+# Declare common scalar types
+
+scalar Data
+scalar JSON
+scalar Upload
