@@ -1,7 +1,7 @@
 import { Resolver, Query } from '@nestjs/graphql'
 import {
-	SighAuthPayload,
-	SighAuthResponse,
+	SignAuthPayload,
+	SignAuthResponse,
 } from '@task-list/shared/data-access/interfaces'
 import { SignIn } from '../decorators/auth.decorator'
 import { AuthService } from '../services/auth.service'
@@ -12,8 +12,8 @@ export class AuthResolver {
 
 	@Query('login')
 	async login(
-		@SignIn() signInPayload: SighAuthPayload
-	): Promise<SighAuthResponse> {
+		@SignIn() signInPayload: SignAuthPayload
+	): Promise<SignAuthResponse> {
 		return await this.authService.login(signInPayload)
 	}
 

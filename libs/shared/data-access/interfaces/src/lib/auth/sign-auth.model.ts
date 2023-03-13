@@ -1,9 +1,9 @@
-export interface SighAuthPayload {
+export interface SignAuthPayload {
 	username: string
 	password: string
 }
 
-export interface SighAuthResponse {
+export interface SignAuthResponse {
 	accessToken: string
 	expiresIn: number
 	id: number
