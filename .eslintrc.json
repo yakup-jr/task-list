@@ -22,7 +22,11 @@
 							},
 							{
 								"sourceTag": "scope:backend-api",
-								"onlyDependOnLibsWithTags": ["scope:shared"]
+								"onlyDependOnLibsWithTags": [
+									"scope:shared",
+									"scope:backend-api",
+									"type:lib"
+								]
 							}
 						]
 					}
