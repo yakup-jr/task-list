@@ -1,5 +1,5 @@
 import { Resolver, Query } from '@nestjs/graphql'
-import {
+import type {
 	SignAuthPayload,
 	SignAuthResponse,
 } from '@task-list/shared/data-access/interfaces'

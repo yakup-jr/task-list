@@ -1,5 +1,4 @@
 import { Module } from '@nestjs/common'
-import { UserService } from '../users/services/user.service'
 import { PassportModule } from '@nestjs/passport'
 import { JwtModule } from '@nestjs/jwt'
 import { environment } from '../../environment/environment'
@@ -7,10 +6,11 @@ import { AuthService } from './services/auth.service'
 import { PasswordService } from './services/password.service'
 import { JwtStrategy } from './strategy/jwt.strategy'
 import { AuthResolver } from './resolvers/auth.resolver'
+import { UserModule } from '../users/users.module'
 
 @Module({
 	imports: [
-		UserService,
+		UserModule,
 		PassportModule.register({
 			defaultStrategy: 'jwt',
 		}),

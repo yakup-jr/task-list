@@ -1,4 +1,4 @@
-import { User } from '@task-list/shared/data-access/interfaces'
+import type { User } from '@task-list/shared/data-access/interfaces'
 
 import {
 	Column,
