@@ -2,10 +2,6 @@
 	"name": "task-list",
 	"version": "0.1.0",
 	"license": "MIT",
-	"scripts": {
-		"db:start": "cp .env ./docker-compose && cd docker-compose && docker-compose up -d",
-		"db:stop": "cd docker-compose && docker-compose stop && sudo rm .env"
-	},
 	"private": true,
 	"dependencies": {
 		"@angular/animations": "~15.1.0",
@@ -52,6 +48,7 @@
 		"@angular/compiler-cli": "~15.1.0",
 		"@angular/language-service": "~15.1.0",
 		"@angular/material": "^15.2.1",
+		"@compodoc/compodoc": "^1.1.19",
 		"@nestjs/schematics": "^9.0.0",
 		"@nestjs/testing": "^9.0.0",
 		"@nrwl/cypress": "15.5.3",
@@ -64,6 +61,7 @@
 		"@nrwl/web": "^15.7.2",
 		"@nrwl/webpack": "15.6.0",
 		"@nrwl/workspace": "15.5.3",
+		"@types/bcrypt": "^5.0.0",
 		"@types/jest": "28.1.1",
 		"@types/node": "18.7.1",
 		"@types/passport-jwt": "^3.0.8",

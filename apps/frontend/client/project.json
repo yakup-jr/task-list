@@ -92,6 +92,9 @@
 				"jestConfig": "apps/frontend/client/jest.config.ts",
 				"passWithNoTests": true
 			}
+		},
+		"compodoc": {
+			"command": "mkdir docs-temp && cp README.md ./docs-temp && cp ./apps/frontend/client/docs/README.md ./ && npx compodoc -p apps/frontend/client/tsconfig.doc.json --theme postmark -r 8085 -d docs/frontend/client/ && rm README.md && cp ./docs-temp/README.md ./ && rm ./docs-temp/README.md && rmdir ./docs-temp"
 		}
 	},
 	"tags": [

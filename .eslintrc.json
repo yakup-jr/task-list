@@ -19,6 +19,14 @@
 							{
 								"sourceTag": "scope:frontend-admin",
 								"onlyDependOnLibsWithTags": ["scope:frontend-admin"]
+							},
+							{
+								"sourceTag": "scope:backend-api",
+								"onlyDependOnLibsWithTags": [
+									"scope:shared",
+									"scope:backend-api",
+									"type:lib"
+								]
 							}
 						]
 					}

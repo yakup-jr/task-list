@@ -1,0 +1,21 @@
+extend type Query {
+	"It's login query"
+	login(
+		"It's username"
+		username: String!
+		"It's password"
+		password: String!
+	): SignInResponse
+	logout: Boolean
+}
+
+"""
+Demo
+multi-line
+comment
+"""
+type SignInResponse {
+	accessToken: String
+	expiresIn: Int
+	id: Int
+}
