@@ -55,6 +55,27 @@
 					"codeCoverage": true
 				}
 			}
+		},
+		"db:start": {
+			"command": "cp .env docker-compose && cd docker-compose && docker-compose up -d"
+		},
+		"db:stop": {
+			"command": "cd docker-compose && docker-compose stop && sudo rm .env"
+		},
+		"typeorm": {
+			"command": "typeorm migration:run -d ./apps/backend/api/data-source.ts"
+		},
+		"typeorm:create": {
+			"command": "npx typeorm-ts-node-commonjs migration:create apps/backend/api/src/migrations/User"
+		},
+		"typeorm:run": {
+			"command": "node_modules/.bin/tsc --project apps/backend/api/tsconfig.migrations.json && npx typeorm-ts-node-commonjs migration:run -d apps/backend/api/data-source.ts"
+		},
+		"typeorm:revert": {
+			"command": "npm run typeorm --migration:revert"
+		},
+		"models": {
+			"command": "node_modules/.bin/tsc --project apps/backend/api/tsconfig.models.json"
 		}
 	},
 	"tags": ["type:app", "scope:backend-api"]
