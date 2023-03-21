@@ -56,25 +56,25 @@
 				}
 			}
 		},
+		"compodoc": {
+			"command": "mkdir docs-temp && cp README.md ./docs-temp && cp ./apps/backend/api/docs/README.md ./ && npx compodoc -p apps/backend/api/tsconfig.doc.json --theme postmark -r 8085 -d docs/backend/api/ && rm README.md && cp ./docs-temp/README.md ./ && rm ./docs-temp/README.md && rmdir ./docs-temp"
+		},
 		"db:start": {
 			"command": "cp .env docker-compose && cd docker-compose && docker-compose up -d"
 		},
 		"db:stop": {
 			"command": "cd docker-compose && docker-compose stop && sudo rm .env"
 		},
-		"typeorm": {
-			"command": "typeorm migration:run -d ./apps/backend/api/data-source.ts"
-		},
-		"typeorm:create": {
+		"db:migration:create": {
 			"command": "npx typeorm-ts-node-commonjs migration:create apps/backend/api/src/migrations/User"
 		},
-		"typeorm:run": {
+		"db:migration:run": {
 			"command": "node_modules/.bin/tsc --project apps/backend/api/tsconfig.migrations.json && npx typeorm-ts-node-commonjs migration:run -d apps/backend/api/data-source.ts"
 		},
-		"typeorm:revert": {
+		"db:migration:revert": {
 			"command": "npm run typeorm --migration:revert"
 		},
-		"models": {
+		"db:migration:models": {
 			"command": "node_modules/.bin/tsc --project apps/backend/api/tsconfig.models.json"
 		}
 	},

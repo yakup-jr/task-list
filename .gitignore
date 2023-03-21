@@ -2,6 +2,7 @@
 
 # security
 .env
+/docs
 
 # compiled output
 dist
