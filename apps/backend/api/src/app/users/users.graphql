@@ -1,7 +1,9 @@
+"extends the graphql Query type with a user"
 extend type Query {
 	user(id: Int): User
 }
 
+"describes the shape of a user object in a graphql api"
 type User {
 	id: Int
 	username: String
