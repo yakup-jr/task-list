@@ -12,10 +12,12 @@ import { UserModule } from './users/users.module'
 
 @Module({
 	imports: [
+		// create a connection to the database for this models
 		TypeOrmModule.forRoot({
 			...environment.connection,
 			entities: [UserModel],
 		}),
+		// setup GraphQLModule
 		GraphQLModule.forRoot<ApolloDriverConfig>({
 			typePaths: ['./**/*.graphql'],
 			context: ({ req }) => ({ req }),

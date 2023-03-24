@@ -1,7 +1,10 @@
 # Declare common scalar types
 
+"description of date"
 scalar Date
+"util for work with json"
 scalar JSON
+"multipart file upload"
 scalar Upload
 
 type Query
