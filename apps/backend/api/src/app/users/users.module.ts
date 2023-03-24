@@ -5,6 +5,7 @@ import { UserService } from './services/user.service'
 import { UserResolver } from './resolvers/user.resolver'
 
 @Module({
+	// create a connection to the databasec for this model
 	imports: [TypeOrmModule.forFeature([UserModel])],
 	providers: [UserService, UserResolver],
 	exports: [UserService],

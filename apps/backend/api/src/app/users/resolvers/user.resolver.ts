@@ -7,8 +7,10 @@ import { GraphQlAuthGuard } from '../guards/graphql.auth-guard'
 
 @Resolver('User')
 export class UserResolver {
+	// get user service
 	constructor(private readonly userService: UserService) {}
 
+	// resolve user
 	@Query('user')
 	@UseGuards(GraphQlAuthGuard)
 	async whoAmI(@CurrentUser() user: UserModel): Promise<UserModel> {
