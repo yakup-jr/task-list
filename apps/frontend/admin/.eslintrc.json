@@ -23,6 +23,7 @@
 						"style": "kebab-case"
 					}
 				],
+				// default change detection property for component - OnPush
 				"change-detection-strategy/on-push": "error"
 			}
 		},
@@ -31,19 +32,29 @@
 			"extends": ["plugin:@angular-eslint/template/recommended"],
 			"plugins": ["@angular-eslint/eslint-plugin-template"],
 			"rules": {
+				// require parentheses around arrow function arguments
 				"arrow-parens": [
 					"error",
 					"as-needed",
 					{ "requireForBlockBody": false }
 				],
+				// enforce consistent brace style for blocks
 				"brace-style": [2, "1tbs", { "allowSingleLine": true }],
+				// require trailing commas
 				"comma-dangle": ["error", "always-multiline"],
+				// require newline at the end of files
 				"eol-last": ["error", "always"],
+				//  disallows spaces inside of the curly brace pair.
 				"template-curly-spacing": ["error", "never"],
+				// disallows consecutive line comments in favor of block comments and requires block comments to have an aligned * character before each line
 				"multiline-comment-style": ["error", "starred-block"],
+				// single quotes without escape
 				"quotes": ["error", "single", { "avoidEscape": true }],
+				// disallow semicolons instead of ASI
 				"semi": ["error", "never"],
+				// turn off enforce consistent indentation
 				"indent": "off",
+				// use tabs
 				"no-tabs": 0
 			}
 		}
