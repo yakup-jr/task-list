@@ -6,9 +6,9 @@
 
 # Quickstart & documentation
 
-[backend-api documentation](https://yakup-jr.github.io/task-list/api)
-[backend-admin documentation](https://yakup-jr.github.io/task-list/admin)
-[backend-client documentation](https://yakup-jr.github.io/task-list/client)
+[backend-api documentation](https://yakup-jr.github.io/task-list/backend/api)
+[backend-admin documentation](https://yakup-jr.github.io/task-list/frontend/admin)
+[backend-client documentation](https://yakup-jr.github.io/task-list/frontend/client)
 
 ### tags:
 
