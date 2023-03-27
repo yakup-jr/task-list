@@ -1,12 +1,15 @@
 const { createGlobPatternsForDependencies } = require('@nrwl/angular/tailwind')
 const { join } = require('path')
+// define shared tailwind config
 const sharedTailwindConfig = require('../../../libs/tailwind-preset/tailwind.config')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	presets: [sharedTailwindConfig],
 	content: [
+		// include tailwind for this path
 		join(__dirname, 'src/**/!(*.stories|*.spec).{ts,html}'),
+		// where to find dependencies for tailwind
 		...createGlobPatternsForDependencies(__dirname),
 	],
 	theme: {

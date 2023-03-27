@@ -9,6 +9,7 @@ import { appRoutes } from './app.routes'
 	declarations: [AppComponent],
 	imports: [
 		BrowserModule,
+		// register router, enabledBlocking - blocks rendering of the application until the initial navigation is complete
 		RouterModule.forRoot(appRoutes, { initialNavigation: 'enabledBlocking' }),
 	],
 	providers: [],

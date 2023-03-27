@@ -1,10 +1,20 @@
+"types of auth"
 extend type Query {
-	login(username: String!, password: String!): SignInResponse
+	"login by username and password"
+	login(
+		"username required"
+		username: String! 
+		"password required"
+		password: String!): SignInResponse
+	"logout"
 	logout: Boolean
 }
 
+"return by method login"
 type SignInResponse {
+	"token (jwt)"
 	accessToken: String
+	"when expires"
 	expiresIn: Int
 	id: Int
 }
