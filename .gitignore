@@ -3,6 +3,7 @@
 # security
 .env
 /docs
+/apps/backend/api/src/migrations
 
 # compiled output
 dist

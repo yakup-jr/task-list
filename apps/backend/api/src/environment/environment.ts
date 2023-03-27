@@ -4,8 +4,8 @@ export const environment = {
 	jwt: {
 		// secret key for authentication
 		secret: process.env.JWT_SECRET,
-		// when expires
-		expiresIn: process.env.JWT_EXPIRES_IN,
+    // when expires
+		expiresIn: Number(process.env.JWT_EXPIRES_IN),
 	},
 	connection: {
 		// type server db

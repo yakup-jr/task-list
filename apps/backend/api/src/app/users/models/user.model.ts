@@ -4,17 +4,17 @@ import {
 	Column,
 	CreateDateColumn,
 	Entity,
-	PrimaryColumn,
+	PrimaryGeneratedColumn,
 	UpdateDateColumn,
 } from 'typeorm'
 
 // marks a class as a database entity
 @Entity({
-	name: 'user',
+	name: 'users',
 })
 export class UserModel implements User {
 	// primary key of the database table
-	@PrimaryColumn()
+  @PrimaryGeneratedColumn()
 	id: number
 
 	// mark date when property create
@@ -38,7 +38,7 @@ export class UserModel implements User {
 	password: string
 
 	// db column username
-	@Column({ unique: true })
+  @Column({ length: 50, unique: true })
 	username: string
 
 	// db column nickname optional

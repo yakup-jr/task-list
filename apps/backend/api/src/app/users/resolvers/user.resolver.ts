@@ -14,6 +14,6 @@ export class UserResolver {
 	@Query('user')
 	@UseGuards(GraphQlAuthGuard)
 	async whoAmI(@CurrentUser() user: UserModel): Promise<UserModel> {
-		return this.userService.findById(user.id)
+		return await this.userService.findById(user.id)
 	}
 }
