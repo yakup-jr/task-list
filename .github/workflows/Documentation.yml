@@ -1,9 +1,7 @@
 name: documentation
 on:
   pull_request:
-    branches: [ main ]
-  push:
-    branches: [ main ]
+    branches: [main]
   workflow_dispatch:
 
 jobs:
@@ -19,7 +17,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Generate docs
-        run: npx nx affected --target=compodoc --parallel=1 --all
+        run: npx nx affected --target=compodoc --parallel=1
 
       - name: Deploy to GitHub Pages
         if: success()
