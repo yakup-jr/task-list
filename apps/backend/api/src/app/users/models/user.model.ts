@@ -4,15 +4,15 @@ import {
 	Column,
 	CreateDateColumn,
 	Entity,
-	PrimaryColumn,
+	PrimaryGeneratedColumn,
 	UpdateDateColumn,
 } from 'typeorm'
 
 @Entity({
-	name: 'user',
+	name: 'users',
 })
 export class UserModel implements User {
-	@PrimaryColumn()
+	@PrimaryGeneratedColumn()
 	id: number
 
 	@CreateDateColumn()
@@ -30,7 +30,7 @@ export class UserModel implements User {
 	@Column()
 	password: string
 
-	@Column({ unique: true })
+	@Column({ length: 50, unique: true })
 	username: string
 
 	@Column({ unique: true })

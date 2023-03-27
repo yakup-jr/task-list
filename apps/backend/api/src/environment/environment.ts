@@ -2,7 +2,7 @@ export const environment = {
 	production: false,
 	jwt: {
 		secret: process.env.JWT_SECRET,
-		expiresIn: process.env.JWT_EXPIRES_IN,
+		expiresIn: Number(process.env.JWT_EXPIRES_IN),
 	},
 	connection: {
 		type: process.env.DB_TYPE as 'postgres',

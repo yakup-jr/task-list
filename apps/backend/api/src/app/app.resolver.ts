@@ -8,7 +8,7 @@ export const resolverMap = {
 		description: 'Date custom scalar type',
 		serialize(value) {
 			if (value instanceof Date) {
-				return value.getTime() // value from the client
+				return value.toISOString() // value from the client
 			}
 			throw Error('GraphQL Date Scalar serializer expected a `Date` object')
 		},
