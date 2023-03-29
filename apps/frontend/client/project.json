@@ -9,9 +9,9 @@
 			"executor": "@angular-devkit/build-angular:browser",
 			"outputs": ["{options.outputPath}"],
 			"options": {
-				"outputPath": "dist/apps/frontend-client/browser",
+				"outputPath": "dist/apps/frontend/client",
 				"index": "apps/frontend/client/src/index.html",
-				"main": "apps/frontend/client/src/main.browser.ts",
+				"main": "apps/frontend/client/src/main.ts",
 				"polyfills": ["zone.js"],
 				"tsConfig": "apps/frontend/client/tsconfig.app.json",
 				"inlineStyleLanguage": "scss",
@@ -95,57 +95,6 @@
 		},
 		"compodoc": {
 			"command": "mkdir docs-temp && cp README.md ./docs-temp && cp ./apps/frontend/client/docs/README.md ./ && npx compodoc -p apps/frontend/client/tsconfig.doc.json --theme postmark -r 8085 -d docs/frontend/client/ && rm README.md && cp ./docs-temp/README.md ./ && rm ./docs-temp/README.md && rmdir ./docs-temp"
-		},
-		"server": {
-			"dependsOn": ["build"],
-			"executor": "@angular-devkit/build-angular:server",
-			"options": {
-				"outputPath": "dist/apps/frontend/client/server",
-				"main": "apps/frontend/client/server.ts",
-				"tsConfig": "apps/frontend/client/tsconfig.server.json"
-			},
-			"configurations": {
-				"production": {
-					"outputHashing": "media"
-				},
-				"development": {
-					"optimization": false,
-					"sourceMap": true,
-					"extractLicenses": false
-				}
-			},
-			"defaultConfiguration": "production"
-		},
-		"serve-ssr": {
-			"executor": "@nguniversal/builders:ssr-dev-server",
-			"configurations": {
-				"development": {
-					"browserTarget": "frontend-client:build:development",
-					"serverTarget": "frontend-client:server:development"
-				},
-				"production": {
-					"browserTarget": "frontend-client:build:production",
-					"serverTarget": "frontend-client:server:production"
-				}
-			},
-			"defaultConfiguration": "development"
-		},
-		"prerender": {
-			"executor": "@nguniversal/builders:prerender",
-			"options": {
-				"routes": ["/"]
-			},
-			"configurations": {
-				"development": {
-					"browserTarget": "frontend-client:build:development",
-					"serverTarget": "frontend-client:server:development"
-				},
-				"production": {
-					"browserTarget": "frontend-client:build:production",
-					"serverTarget": "frontend-client:server:production"
-				}
-			},
-			"defaultConfiguration": "production"
 		}
 	},
 	"tags": [
